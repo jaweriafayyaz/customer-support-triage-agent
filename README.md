@@ -98,6 +98,8 @@ Open → **http://localhost:5000**
 ---
 
 ## 📁 Project Structure
+
+​```
 customer-support-triage-agent/
 ├── app.py                          ← Flask app (/submit + /agent-dashboard)
 ├── pipeline.py                     ← LangGraph orchestration
@@ -112,6 +114,7 @@ customer-support-triage-agent/
 │   └── agent_dashboard.html        ← Internal agent view
 ├── .env.example
 └── README.md
+​```
 
 ---
 ## 📊 Evaluation Results

@@ -126,14 +126,6 @@ Full failure analysis, root causes, and before/after regression in [`evaluation_
 
 ---
 
-## 📄 Full Documentation
-
-- [`day1_discovery_baseline.md`](day1_discovery_baseline.md), target user, workflow map, baseline
-- [`day2_design.md`](day2_design.md), architecture, schemas, tool rationale
-- [`day4_evaluation.md`](day4_evaluation.md), results, failure analysis, real-LLM verification
-- [`CASE_STUDY.md`](CASE_STUDY.md), full write-up
----
-
 ## 📞 Contact
 
 - 📧 jaweriafayyaz474@gmail.com

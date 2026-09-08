@@ -1,0 +1,9 @@
+flask
+langgraph
+scikit-learn
+faiss-cpu
+numpy
+pydantic
+python-dotenv
+tenacity
+groq

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Ticket Triage Agent</title>
+    <style>
+        body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; }
+        textarea, input { width: 100%; padding: 8px; margin-bottom: 12px; box-sizing: border-box; }
+        button { padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .result { margin-top: 24px; padding: 16px; border-radius: 6px; background: #f3f4f6; }
+        .auto_approved { border-left: 6px solid #16a34a; }
+        .needs_human_review { border-left: 6px solid #d97706; }
+        .error { color: #dc2626; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Support Ticket Triage Agent</h1>
+    <p>Paste a ticket below to see how the system would classify, research, and draft a reply.</p>
+
+    <form method="POST">
+        <label>Ticket ID (optional)</label>
+        <input type="text" name="ticket_id" placeholder="T-1001">
+
+        <label>Subject</label>
+        <input type="text" name="subject" placeholder="Card charged twice">
+
+        <label>Body</label>
+        <textarea name="body" rows="5" placeholder="Paste the customer's message here..."></textarea>
+
+        <button type="submit">Run Triage</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if result %}
+        <div class="result {{ result.action }}">
+            <p><strong>Category:</strong> {{ result.category }} (confidence: {{ "%.2f"|format(result.confidence) }})</p>
+            <p><strong>Action:</strong> {{ result.action }}
+                {% if result.flagged_reason %} — {{ result.flagged_reason }}{% endif %}</p>
+            {% if result.retrieved_context %}
+                <p><strong>Policy used:</strong> {{ result.retrieved_context }}</p>
+            {% endif %}
+            <p><strong>Draft reply:</strong><br>{{ result.draft_reply }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

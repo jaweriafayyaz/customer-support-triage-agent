@@ -1,0 +1,11 @@
+ticket_id,expected,actual,correct,confidence,action,latency_sec
+T-1,Billing,Billing,True,0.95,auto_approved,2.2321
+T-2,Technical,Technical,True,0.95,auto_approved,1.9376
+T-3,Refund,Refund,True,0.95,needs_human_review,2.2515
+T-4,Shipping,Shipping,True,0.95,auto_approved,1.9202
+T-5,General,General,True,0.95,auto_approved,1.5532
+T-6,Refund,Refund,True,0.95,needs_human_review,2.2647
+T-7,Refund,Shipping,False,0.95,auto_approved,2.2569
+T-8,Unroutable,Unroutable,True,0.1,needs_human_review,1.9044
+T-9,Shipping,Shipping,True,0.95,auto_approved,1.6391
+T-10,Unroutable,Unroutable,True,0.2,needs_human_review,2.108

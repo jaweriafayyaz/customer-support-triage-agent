@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Support</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; }
+        input, textarea { width: 100%; padding: 8px; margin-bottom: 12px; box-sizing: border-box; }
+        button { padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .thank-you { margin-top: 24px; padding: 16px; border-radius: 6px; background: #ecfdf5; border-left: 6px solid #16a34a; }
+        label { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Contact Support</h1>
+    <p>Tell us what's going on and we'll get back to you shortly.</p>
+
+    <form method="POST">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Jane Doe">
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="jane@example.com">
+
+        <label>Subject</label>
+        <input type="text" name="subject" placeholder="Issue with my order">
+
+        <label>Message</label>
+        <textarea name="body" rows="5" placeholder="Describe your issue..."></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if submitted %}
+        <div class="thank-you">
+            <p>Thanks{% if name %}, {{ name }}{% endif %}! We've received your message
+            (ticket #{{ ticket_id }}) and a member of our team will follow up soon.</p>
+        </div>
+    {% endif %}
+</body>
+</html>

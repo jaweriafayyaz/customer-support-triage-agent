@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+results.csv
+faiss_index/
+.venv/
+venv/

@@ -99,22 +99,19 @@ Open → **http://localhost:5000**
 
 ## 📁 Project Structure
 
-​```
-customer-support-triage-agent/
-├── app.py                          ← Flask app (/submit + /agent-dashboard)
-├── pipeline.py                     ← LangGraph orchestration
-├── faiss_retriever.py              ← Real FAISS retrieval
-├── llm_client.py                   ← Groq LLM wrapper (retries, mock mode)
-├── schemas.py                      ← Pydantic I/O contracts
-├── config.py                       ← Loads settings from .env
-├── run_test_set.py                 ← 10-ticket batch test runner
-├── eval_day4.py                    ← Evaluation harness
-├── templates/
-│   ├── submit.html                 ← Customer-facing form
-│   └── agent_dashboard.html        ← Internal agent view
-├── .env.example
-└── README.md
-​```
+- `app.py`, Flask app (submit + dashboard)
+- `pipeline.py`, LangGraph orchestration
+- `faiss_retriever.py`, Real FAISS retrieval
+- `llm_client.py`, Groq LLM wrapper
+- `schemas.py`, Pydantic I/O contracts
+- `config.py`, Loads .env settings
+- `run_test_set.py`, Batch test runner
+- `eval_day4.py`, Evaluation harness
+- `templates/`
+  - `submit.html`, Customer form
+  - `agent_dashboard.html`, Agent view
+- `.env.example`
+- `README.md`
 
 ---
 ## 📊 Evaluation Results

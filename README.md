@@ -122,7 +122,7 @@ Open → **http://localhost:5000**
 | Manual-touch Rate | 70% (Refunds + low-confidence always reviewed) |
 | Latency | ~0.5-2s/ticket (real API) |
 
-Full failure analysis, root causes, and before/after regression in [`day4_evaluation.md`](day4_evaluation.md).
+Full failure analysis, root causes, and before/after regression in [`evaluation_results.md`](evaluation_results.md).
 
 ---
 

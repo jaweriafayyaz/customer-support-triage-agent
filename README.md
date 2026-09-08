@@ -106,7 +106,7 @@ Open → **http://localhost:5000**
 - `schemas.py`, Pydantic I/O contracts
 - `config.py`, Loads .env settings
 - `run_test_set.py`, Batch test runner
-- `eval_day4.py`, Evaluation harness
+- `run_evaluation.py`, Evaluation harness
 - `templates/`
   - `submit.html`, Customer form
   - `agent_dashboard.html`, Agent view
@@ -119,7 +119,7 @@ Open → **http://localhost:5000**
 | Metric | Value |
 |--------|-------|
 | Classification Accuracy | **90%** (real Groq API) |
-| Manual-touch Rate | 70% (Refunds + low-confidence always reviewed) |
+| Manual-touch Rate | 40% (Refunds + low-confidence always reviewed) |
 | Latency | ~0.5-2s/ticket (real API) |
 
 Full failure analysis, root causes, and before/after regression in [`evaluation_results.md`](evaluation_results.md).
